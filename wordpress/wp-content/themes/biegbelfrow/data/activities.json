@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Spacer",
+    "distance": "minimum 6 km",
+    "description": "Ubierz wygodne buty, włącz aplikację i wybierz się na minimum 6 km spacer – samodzielnie lub z innymi Belferkami i Belframi. Tu nie liczy się tempo, ale pomaganie, zdrowie i endorfiny!",
+    "key": "spacer",
+    "sections": [
+      {
+        "title": "Jak zacząć",
+        "content": "<div class=\"pt-3\"> <ul><li><a href=\"\">Zaloguj się</a> i zapisz na Bieg Belfrów.<br><small>Możesz zapisać się indywidualnie, utworzyć grupę lub dołączyć do już istniejącej.</small></li><li>Wybierz pakiet <b>SPACER</b> i - opcjonalnie - koszulkę <br><small>Możesz wybrać więcej kategorii.</small></li><li>Ureguluj opłatę startową.</li><li>Po zaksięgowaniu płatności, na wskazany adres, wyślemy <a href=\"\"> pakiet startowy</a>.</li></ul> </div>"
+      },
+      {
+        "title": "Realizacja",
+        "content": "<div class=\"pt-3\"> <ul><li>Aby zasłużyć na medal Biegu Belfrów przejdź w maju <b>minimum 6 km</b> i zarejestruj swoją aktywność w dowolnej aplikacji.<br><small>Dystans pokonaj w wybranym przez siebie miejscu – jednorazowo lub podziel na mniejsze odległości. <b>Pamiętaj również, że możesz przejść więcej niż 6 km i zarejestrować wiele aktywności.</b></small></li><li>Jeśli planujesz zrealizować większy dystans (jednorazowo lub podczas kilku spacerów w miesiącu) i chcesz, żeby Twój wynik pojawił się w&nbsp; ogólnopolskim rankingu Biegu Belfrów:<br><small><ul><li>Wyraź zgodę na publikację swojego nicku w tabeli rankingowej.</li><li>Po każdej aktywności wpisz liczbę kilometrów, którą pokonałaś/eś. Lista jest aktualizowana na bieżąco.</li><li>Pamiętaj o każdorazowym rejestrowaniu swojej aktywności w dowolnej aplikacji. Możemy prosić Cię o udokumentowanie pokonanego dystansu w postaci np. zrzuty ekranu z programu.</li></ul></small></li></ul> </div>"
+      },
+      {
+        "title": "Pakiet startowy",
+        "content": "<div class=\"pt-3\"> Pakiet startowy kosztuje 40 zł (+koszt wysyłki) i&nbsp;zawiera:<ul><li>medal</li><li>pamiątkowy gadżet</li><li>numer startowy do pobrania w PDF</li></ul><small>Opcjonalnie, podczas zapisu, możesz dokupić koszulkę Biegu Belfrów.</small> </div>"
+      }
+    ]
+  },
+  {
+    "title": "Bieg",
+    "distance": "minimum 6 km",
+    "description": "Koniecznie zrób rozgrzewkę i przebiegnij minimum 6 km. Możesz pokusić się o pobicie rekordu życiowego lub po prostu zaplanować spokojny trucht. ",
+    "key": "bieg",
+    "sections": [
+      {
+        "title": "Jak zacząć",
+        "content": "<div class=\"pt-3\"> <ul><li><a href=\"\">Zaloguj się</a> i zapisz na Bieg Belfrów.<br><small>Możesz zapisać się indywidualnie, utworzyć grupę lub dołączyć do już istniejącej.</small></li><li>Wybierz pakiet <b>BIEG</b> i - opcjonalnie - koszulkę <br><small>Możesz wybrać więcej kategorii.</small></li><li>Ureguluj opłatę startową.</li><li>Po zaksięgowaniu płatności, na wskazany adres, wyślemy <a href=\"\"> pakiet startowy</a>.</li></ul> </div>"
+      },
+      {
+        "title": "Realizacja",
+        "content": "<div class=\"pt-3\"> <ul><li>Aby zasłużyć na medal Biegu Belfrów przebiegnij w maju <b>minimum 6 km</b> i zarejestruj swoją aktywność w dowolnej aplikacji.<br><small>Dystans pokonaj w wybranym przez siebie miejscu – jednorazowo lub podziel na mniejsze odległości. <b>Pamiętaj również, że możesz przebiec więcej niż 6 km i zarejestrować wiele aktywności.</b></small></li><li>Jeśli planujesz zrealizować większy dystans (jednorazowo lub podczas kilku biegów w miesiącu) i chcesz, żeby Twój wynik pojawił się w&nbsp; ogólnopolskim rankingu Biegu Belfrów:<br><small><ul><li>Wyraź zgodę na publikację swojego nicku w tabeli rankingowej.</li><li>Po każdej aktywności wpisz liczbę kilometrów, którą pokonałaś/eś. Lista jest aktualizowana na bieżąco.</li><li>Pamiętaj o każdorazowym rejestrowaniu swojej aktywności w dowolnej aplikacji. Możemy prosić Cię o udokumentowanie pokonanego dystansu w postaci np. zrzuty ekranu z programu.</li></ul></small></li></ul> </div>"
+      },
+      {
+        "title": "Pakiet startowy",
+        "content": "<div class=\"pt-3\"> Pakiet startowy kosztuje 40 zł (+koszt wysyłki) i&nbsp;zawiera:<ul><li>medal</li><li>pamiątkowy gadżet</li><li>numer startowy do pobrania w PDF</li></ul><small>Opcjonalnie, podczas zapisu, możesz dokupić koszulkę Biegu Belfrów.</small> </div>"
+      }
+    ]
+  },
+  {
+    "title": "Rower",
+    "distance": "minimum 12 km",
+    "description": "Przygotuj rower, włóż kask i ruszaj przed siebie. Gdy licznik pokaże 12 km, możesz skończyć przejażdżkę lub dać się ponieść rowerowej przygodzie!",
+    "key": "rower",
+    "sections": [
+      {
+        "title": "Jak zacząć",
+        "content": "<div class=\"pt-3\"> <ul><li><a href=\"\">Zaloguj się</a> i zapisz na Bieg Belfrów.<br><small>Możesz zapisać się indywidualnie, utworzyć grupę lub dołączyć do już istniejącej.</small></li><li>Wybierz pakiet <b>ROWER</b> i - opcjonalnie - koszulkę <br><small>Możesz wybrać więcej kategorii.</small></li><li>Ureguluj opłatę startową.</li><li>Po zaksięgowaniu płatności, na wskazany adres, wyślemy <a href=\"\"> pakiet startowy</a>.</li></ul> </div>"
+      },
+      {
+        "title": "Realizacja",
+        "content": "<div class=\"pt-3\"> <ul><li>Aby zasłużyć na medal Biegu Belfrów przejedź w maju <b>minimum 12 km</b> i zarejestruj swoją aktywność w dowolnej aplikacji.<br><small>Dystans pokonaj w wybranym przez siebie miejscu – jednorazowo lub podziel na mniejsze odległości. <b>Pamiętaj również, że możesz przejechać więcej niż 12 km i zarejestrować wiele aktywności.</b></small></li><li>Jeśli planujesz zrealizować większy dystans (jednorazowo lub podczas kilku jazd w miesiącu) i chcesz, żeby Twój wynik pojawił się w&nbsp; ogólnopolskim rankingu Biegu Belfrów:<br><small><ul><li>Wyraź zgodę na publikację swojego nicku w tabeli rankingowej.</li><li>Po każdej aktywności wpisz liczbę kilometrów, którą pokonałaś/eś. Lista jest aktualizowana na bieżąco.</li><li>Pamiętaj o każdorazowym rejestrowaniu swojej aktywności w dowolnej aplikacji. Możemy prosić Cię o udokumentowanie pokonanego dystansu w postaci np. zrzuty ekranu z programu.</li></ul></small></li></ul> </div>"
+      },
+      {
+        "title": "Pakiet startowy",
+        "content": "<div class=\"pt-3\"> Pakiet startowy kosztuje 40 zł (+koszt wysyłki) i&nbsp;zawiera:<ul><li>medal</li><li>pamiątkowy gadżet</li><li>numer startowy do pobrania w PDF</li></ul><small>Opcjonalnie, podczas zapisu, możesz dokupić koszulkę Biegu Belfrów.</small> </div>"
+      }
+    ]
+  },
+  {
+    "title": "Iron Teacher",
+    "distance": "minimum 12 + 18 + 48 km",
+    "description": "To zadanie nie tylko dla matematyków: dodaj do siebie wszystkie dyscypliny i pomnóż kilometry! Zrealizuj wyzwanie, a otrzymasz specjalną statuetkę Iron Teachera!",
+    "key": "ironteacher",
+    "sections": [
+      {
+        "title": "Jak zacząć",
+        "content": "<div class=\"pt-3\"> <ul><li><a href=\"\">Zaloguj się</a> i zapisz na Bieg Belfrów.<br><small>Możesz zapisać się indywidualnie, utworzyć grupę lub dołączyć do już istniejącej.</small></li><li>Wybierz pakiet <b>IRON TEACHER</b> i - opcjonalnie - koszulkę <br><small>Możesz wybrać więcej kategorii.</small></li><li>Ureguluj opłatę startową.</li><li>Po zaksięgowaniu płatności, na wskazany adres, wyślemy <a href=\"\"> pakiet startowy</a>, a po udokumentowaniu przez Ciebie zrealizowanych dystansów – statuetkę Iron Teachera.</li></ul> </div>"
+      },
+      {
+        "title": "Realizacja",
+        "content": "<div class=\"pt-3\"> <ul><li>Aby zdobyć tytuł Iron Teachera wykonaj w maju wszystkie trzy aktywności: <b>przejdź min. 12 km, przebiegnij min. 18 km, przejedź min. 48 km,</b> i zarejestruj swoją aktywność w dowolnej aplikacji.<br><small>Dystans pokonaj w wybranym przez siebie miejscu – jednorazowo lub podziel na mniejsze odległości. <b>Pamiętaj również, że możesz pokonać większe niż wymagane liczby kiometrów i zarejestrować wiele aktywności.</b></small></li><li>Jeśli planujesz zrealizować większy dystans (jednorazowo lub podczas kilku  w miesiącu) i chcesz, żeby Twój wynik pojawił się w ogólnopolskim rankingu Biegu Belfrów:<br><small><ul><li>Wyraź zgodę na publikację swojego nicku w tabeli rankingowej.</li><li>Po każdej aktywności wpisz liczbę kilometrów, którą pokonałaś/eś. Lista jest aktualizowana na bieżąco.</li><li>Po zrealizowaniu aktywności prześlij zrzuty ekranu na bieg@odnrewers.pl</li></ul></small></li></ul> </div>"
+      },
+      {
+        "title": "Pakiet startowy",
+        "content": "<div class=\"pt-3\"> Pakiet startowy kosztuje 80 zł (+koszt wysyłki) i&nbsp;zawiera:<ul><li>medal</li><li>statuetka Iron Teachera</li><li>pamiątkowy gadżet</li><li>numer startowy do pobrania w PDF</li></ul><small>Opcjonalnie, podczas zapisu, możesz dokupić koszulkę Biegu Belfrów.</small> </div>"
+      }
+    ]
+  }
+]

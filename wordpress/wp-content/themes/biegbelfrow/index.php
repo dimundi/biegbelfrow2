@@ -1,19 +1,9 @@
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo esc_html(get_bloginfo('name')); ?></title>
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<main>
-    <h1>Hello world!</h1>
-    <p>Bieg Belfrów — WordPress działa.</p>
-    <a href="<?php echo esc_url(admin_url()); ?>">Panel administracyjny</a>
+<?php get_header(); ?>
+<main id="main" class="container section editor-content">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<article><h1><?php if (!is_singular()) : ?><a href="<?php the_permalink(); ?>"><?php endif; ?><?php the_title(); ?><?php if (!is_singular()) : ?></a><?php endif; ?></h1><?php the_content(); ?></article>
+<?php endwhile; the_posts_pagination(); else : ?>
+<h1>Nie znaleziono treści</h1><a href="<?php echo esc_url(home_url('/')); ?>">Wróć na stronę główną</a>
+<?php endif; ?>
 </main>
-<?php wp_footer(); ?>
-</body>
-</html>
-
+<?php get_footer(); ?>

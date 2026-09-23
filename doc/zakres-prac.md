@@ -6,16 +6,16 @@ Przeniesienie strony z projektu `biegbelfrow` (React/Next.js) do projektu `biegb
 
 ## Pilny etap — 6 godzin
 
-- Obecna strona biegbelfrow.pl może zostać zamknięta w ciągu najbliższych 24 godzin. Priorytetem jest zabezpieczenie treści, mediów i danych oraz przygotowanie działającej wersji na WordPressie.
+- Możemy stracić dostęp do publicznego podglądu biegbelfrow.pl. Kod i dane pozostają dostępne; priorytetem jest przygotowanie działającej wersji na WordPressie.
 - Pierwsza wersja nie wymaga uruchomionych płatności; ich konfigurację i weryfikację można dokończyć później.
-- Najpierw zabezpieczamy dostępne treści i zasoby oraz pozyskujemy eksporty ze starego CMS i API. Sam kod React nie stanowi kopii danych systemu.
+- Zabezpieczenie starego podglądu odkładamy. Prace zaczynamy od widoku nowej strony: nagłówka, banera głównego i stopki.
 - Zakres na pierwsze 6 godzin: uruchomienie WordPressa, najważniejsze strony i nawigacja, wygląd bieżącej edycji z edytowalnymi kolorami i logo oraz podstawowa struktura wtyczki BB i panelu uczestnika.
 - Pełna migracja danych, rozbudowane funkcje uczestnika, rankingi i sklep pozostają w zakresie projektu; ich ukończenie w pierwszym etapie zależy od dostępności danych i środowiska.
-- Do uruchomienia potrzebne są docelowy hosting WordPressa i możliwość skierowania domeny na nową stronę. Trzeba ustalić, czy zagrożone zamknięciem są również stare API, CMS i ich dane.
+- Do publicznego uruchomienia potrzebne są docelowy hosting WordPressa i możliwość skierowania domeny na nową stronę.
 
 ## Zakres
 
-1. **Strona i treści** — przygotowanie motywu oraz przeniesienie stron informacyjnych, aktualności, grafik i nawigacji; zarządzanie treściami w WordPressie.
+1. **Strona i treści** — przygotowanie motywu oraz przeniesienie stron informacyjnych, grafik i nawigacji; zarządzanie treściami w WordPressie. Aktualności nie przenosimy i nie umieszczamy ich w menu.
 2. **Sklep WooCommerce** — pakiety uczestnictwa, koszulki i dodatki, koszyk, zamówienia oraz płatności.
 3. **Wtyczka Bieg Belfrów** — zarządzanie bieżącą i archiwalnymi edycjami, zapisami, uczestnikami, aktywnościami, wynikami i rankingami; powiązanie edycji z produktami oraz zamówieniami WooCommerce.
 4. **Panel uczestnika „Mój BB”** — jedno konto i logowanie do strony oraz sklepu; podgląd udziału w edycjach, dodawanie aktywności, własne wyniki, rankingi, historia udziału, zakupy, zamówienia i zarządzanie danymi konta.
@@ -24,6 +24,9 @@ Przeniesienie strony z projektu `biegbelfrow` (React/Next.js) do projektu `biegb
 
 ## Wygląd zmieniany co edycję
 
+- Nie kopiujemy starej strony 1:1. Możemy przeprojektować układ i nadać stronie lżejszy, bardziej współczesny wygląd.
+- Wykorzystujemy istniejące logo, zdjęcia i grafiki. Nowy projekt nie powinien wymagać tworzenia nowych materiałów graficznych lub powinien ograniczać ich liczbę do minimum.
+- Poprawę wyglądu opieramy przede wszystkim na typografii, odstępach, kolorystyce, kompozycji sekcji i responsywności.
 - Każda coroczna edycja ma własną identyfikację wizualną: kolory główne i pomocnicze, kolor lub wariant logo oraz grafiki.
 - Ustawienia wyglądu edycji muszą być łatwo edytowalne w panelu WordPressa, bez zmian w kodzie i ręcznego poprawiania każdej podstrony.
 - Wybór bieżącej edycji stosuje jej identyfikację wizualną spójnie na stronie, w sklepie i panelu uczestnika.
