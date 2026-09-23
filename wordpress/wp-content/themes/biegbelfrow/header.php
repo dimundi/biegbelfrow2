@@ -8,7 +8,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link" href="#main">Przejdź do treści</a>
-<div class="topline"><div class="container"><span>Razem w ruchu. Razem pomagamy.</span><span>Ogólnopolski Bieg Belfrów</span></div></div>
 <header class="site-header">
     <div class="container header-inner">
         <a class="brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Bieg Belfrów — strona główna"><img src="<?php echo esc_url(bb_image('logo', 'BB7_logo_small.png')); ?>" alt="Bieg Belfrów" width="435" height="320"></a>
@@ -17,8 +16,8 @@
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'fallback_cb' => 'bb_fallback_menu', 'depth' => 1)); ?>
             <details class="account-menu">
                 <summary aria-label="Menu konta">
+                    <span><?php echo is_user_logged_in() ? 'Moje konto' : 'Zaloguj się'; ?></span>
                     <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></svg>
-                    <svg class="account-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 6 5 5 5-5"/></svg>
                 </summary>
                 <div class="account-links">
                 <?php if (is_user_logged_in()) : ?>

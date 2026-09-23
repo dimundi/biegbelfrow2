@@ -1,0 +1,687 @@
+{
+  "source": "https://biegbelfrow.pl/",
+  "fetchedAt": "2026-09-23T22:51:27.608Z",
+  "editions": {
+    "5": [
+      {
+        "activityType": 1,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 115,
+            "nick": "Tomasz Bączkowski",
+            "groupName": "Szkoła Podstawowa nr 6 im. Adama Mickiewicza w Międzyrzeczu",
+            "distance": 345000
+          },
+          {
+            "position": 2,
+            "startNo": 185,
+            "nick": "Agata - SP im. Mikołaja Reja w Nagłowicach",
+            "groupName": "",
+            "distance": 306400
+          },
+          {
+            "position": 3,
+            "startNo": 202,
+            "nick": "Kasia ",
+            "groupName": "",
+            "distance": 297000
+          },
+          {
+            "position": 4,
+            "startNo": 441,
+            "nick": "Ania M",
+            "groupName": "ZSP nr 22 we Wrocławiu ",
+            "distance": 212100
+          },
+          {
+            "position": 5,
+            "startNo": 106,
+            "nick": "Danuta Podraza",
+            "groupName": "Przedszkole Miejskie Nr 1 w Mielcu im. Kubusia Puchatka",
+            "distance": 204500
+          },
+          {
+            "position": 6,
+            "startNo": 172,
+            "nick": "Tomasz Socha",
+            "groupName": "Publiczne Liceum Ogólnokształcące nr IX im. Generała Władysława Andersa w Opolu",
+            "distance": 201200
+          },
+          {
+            "position": 7,
+            "startNo": 536,
+            "nick": "Ania Ania",
+            "groupName": "SPORTOWA 19 WICKA TORUŃ",
+            "distance": 186500
+          },
+          {
+            "position": 8,
+            "startNo": 203,
+            "nick": "Ola",
+            "groupName": "",
+            "distance": 170100
+          },
+          {
+            "position": 9,
+            "startNo": 390,
+            "nick": "Sylwia",
+            "groupName": "SP Siercza",
+            "distance": 156000
+          },
+          {
+            "position": 10,
+            "startNo": 392,
+            "nick": "Kasia",
+            "groupName": "SP Siercza",
+            "distance": 152900
+          }
+        ]
+      },
+      {
+        "activityType": 2,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 132,
+            "nick": "Tomasz Pyzik",
+            "groupName": "Drużyna Jedynki - I LO Dwujęzyczne im. Edwarda Dembowskiego w Gliwicach ",
+            "distance": 303000
+          },
+          {
+            "position": 2,
+            "startNo": 172,
+            "nick": "Tomasz Socha",
+            "groupName": "Publiczne Liceum Ogólnokształcące nr IX im. Generała Władysława Andersa w Opolu",
+            "distance": 200100
+          },
+          {
+            "position": 3,
+            "startNo": 457,
+            "nick": "Michał Gburek",
+            "groupName": "VI LO im. A. Mickiewicza w Krakowie",
+            "distance": 198800
+          },
+          {
+            "position": 4,
+            "startNo": 412,
+            "nick": "Ola Cichosz",
+            "groupName": "SP 27 Gdańsk",
+            "distance": 172400
+          },
+          {
+            "position": 5,
+            "startNo": 408,
+            "nick": "Dominik Molendziński",
+            "groupName": "ZSP11 Wrocław",
+            "distance": 158200
+          },
+          {
+            "position": 6,
+            "startNo": 363,
+            "nick": "Krzysztof",
+            "groupName": "Szkoła Podstawowa nr 20 w Katowicach",
+            "distance": 155000
+          },
+          {
+            "position": 7,
+            "startNo": 243,
+            "nick": "Maciej",
+            "groupName": "ZSzP Kłecko",
+            "distance": 147100
+          },
+          {
+            "position": 8,
+            "startNo": 463,
+            "nick": "Kasia M.",
+            "groupName": "Szkoła Podstawowa nr 18 im. Fiedlera w Toruniu",
+            "distance": 140000
+          },
+          {
+            "position": 9,
+            "startNo": 106,
+            "nick": "Danuta Podraza",
+            "groupName": "Przedszkole Miejskie Nr 1 w Mielcu im. Kubusia Puchatka",
+            "distance": 119500
+          },
+          {
+            "position": 10,
+            "startNo": 411,
+            "nick": "Sebastian Kaczerzewski",
+            "groupName": "Szkoła Podstawowa nr 18 im. Arkadego Fiedlera w Toruniu ",
+            "distance": 119400
+          }
+        ]
+      },
+      {
+        "activityType": 3,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 336,
+            "nick": "Seba STO 4",
+            "groupName": "",
+            "distance": 994000
+          },
+          {
+            "position": 2,
+            "startNo": 161,
+            "nick": "Piotr_K",
+            "groupName": "",
+            "distance": 869000
+          },
+          {
+            "position": 3,
+            "startNo": 152,
+            "nick": "Koto",
+            "groupName": "ODN Rewers",
+            "distance": 718700
+          },
+          {
+            "position": 4,
+            "startNo": 316,
+            "nick": "PatKa",
+            "groupName": "SP77",
+            "distance": 553500
+          },
+          {
+            "position": 5,
+            "startNo": 104,
+            "nick": "Beata",
+            "groupName": "UG",
+            "distance": 405899
+          },
+          {
+            "position": 6,
+            "startNo": 127,
+            "nick": "Grzegorz",
+            "groupName": "SP 5 Wejherowo",
+            "distance": 320200
+          },
+          {
+            "position": 7,
+            "startNo": 455,
+            "nick": "Wojciech G.",
+            "groupName": "OSW Jarosław",
+            "distance": 275900
+          },
+          {
+            "position": 8,
+            "startNo": 349,
+            "nick": "Anna Stępel",
+            "groupName": "Szkoła Podstawowa im. Prymasa Tysiąclecia w Nadmie",
+            "distance": 138000
+          },
+          {
+            "position": 9,
+            "startNo": 295,
+            "nick": "Alicja ",
+            "groupName": "",
+            "distance": 133600
+          },
+          {
+            "position": 10,
+            "startNo": 542,
+            "nick": "Grzegorz Janicki",
+            "groupName": "Liceum Ogólnokształcące im. Feliksa Nowowiejskiego w Braniewie",
+            "distance": 115300
+          }
+        ]
+      }
+    ],
+    "6": [
+      {
+        "activityType": 1,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 304,
+            "nick": "AGAT",
+            "groupName": "Polska Sobotnia Szkoła w Lancaster",
+            "distance": 429800
+          },
+          {
+            "position": 2,
+            "startNo": 208,
+            "nick": "Kaśka",
+            "groupName": "Babki na trasie",
+            "distance": 395200
+          },
+          {
+            "position": 3,
+            "startNo": 187,
+            "nick": "KASIA S.",
+            "groupName": "SPORTOWA 19 WICKA TORUŃ",
+            "distance": 301700
+          },
+          {
+            "position": 4,
+            "startNo": 242,
+            "nick": "Krystek",
+            "groupName": "Sportowa 19 Wicka Toruń",
+            "distance": 294000
+          },
+          {
+            "position": 5,
+            "startNo": 223,
+            "nick": "Hipcia",
+            "groupName": "Sportowa 19 Wicka Toruń ",
+            "distance": 269900
+          },
+          {
+            "position": 6,
+            "startNo": 222,
+            "nick": "Magda",
+            "groupName": "Polska Sobotnia Szkoła w Lancaster",
+            "distance": 244400
+          },
+          {
+            "position": 7,
+            "startNo": 276,
+            "nick": "Anita",
+            "groupName": "ZE11 zgora",
+            "distance": 240300
+          },
+          {
+            "position": 8,
+            "startNo": 210,
+            "nick": "Ewa",
+            "groupName": "Babki na trasie",
+            "distance": 208300
+          },
+          {
+            "position": 9,
+            "startNo": 162,
+            "nick": "Małgosia",
+            "groupName": "",
+            "distance": 208000
+          },
+          {
+            "position": 10,
+            "startNo": 214,
+            "nick": "Madzia",
+            "groupName": "Babki na trasie",
+            "distance": 205000
+          }
+        ]
+      },
+      {
+        "activityType": 2,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 136,
+            "nick": "Miron Zagórski",
+            "groupName": "II LO Bochnia & SP7 Bochnia",
+            "distance": 408100
+          },
+          {
+            "position": 2,
+            "startNo": 160,
+            "nick": "Tomasz Pyzik",
+            "groupName": "I LO Dwujęzyczne w Gliwicach - Drużyna Jedynki ",
+            "distance": 328800
+          },
+          {
+            "position": 3,
+            "startNo": 238,
+            "nick": "Kasia M.",
+            "groupName": "Szkoła Podstawowa nr 18 im. Arkadego Fiedlera w Toruniu",
+            "distance": 292800
+          },
+          {
+            "position": 4,
+            "startNo": 161,
+            "nick": "Kolorowa Dorota (PSP Witeradów)",
+            "groupName": "",
+            "distance": 244700
+          },
+          {
+            "position": 5,
+            "startNo": 137,
+            "nick": "Bogo 80",
+            "groupName": "SP 84 WROCŁAW",
+            "distance": 200700
+          },
+          {
+            "position": 6,
+            "startNo": 141,
+            "nick": "Barbara ",
+            "groupName": "SP Jerzmanowa ",
+            "distance": 198700
+          },
+          {
+            "position": 7,
+            "startNo": 184,
+            "nick": "Ks. Seba",
+            "groupName": "Szkoła Podstawowa nr 18 im. Arkadego Fiedlera w Toruniu",
+            "distance": 196200
+          },
+          {
+            "position": 8,
+            "startNo": 264,
+            "nick": "Robert",
+            "groupName": "SPzOI2",
+            "distance": 169600
+          },
+          {
+            "position": 9,
+            "startNo": 301,
+            "nick": "Krzysztof",
+            "groupName": "SP 84 WROCŁAW",
+            "distance": 144700
+          },
+          {
+            "position": 10,
+            "startNo": 273,
+            "nick": "Maciej",
+            "groupName": "ZSP Kłecko",
+            "distance": 136000
+          }
+        ]
+      },
+      {
+        "activityType": 3,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 264,
+            "nick": "Robert",
+            "groupName": "SPzOI2",
+            "distance": 1612300
+          },
+          {
+            "position": 2,
+            "startNo": 155,
+            "nick": "Seba STO 4",
+            "groupName": "",
+            "distance": 1597300
+          },
+          {
+            "position": 3,
+            "startNo": 102,
+            "nick": "Koto",
+            "groupName": "ODN Rewers",
+            "distance": 1024300
+          },
+          {
+            "position": 4,
+            "startNo": 113,
+            "nick": "Beata",
+            "groupName": "UG",
+            "distance": 858999
+          },
+          {
+            "position": 5,
+            "startNo": 207,
+            "nick": "Ania H",
+            "groupName": "Babki na trasie",
+            "distance": 651600
+          },
+          {
+            "position": 6,
+            "startNo": 203,
+            "nick": "Alice",
+            "groupName": "Babki na trasie",
+            "distance": 630900
+          },
+          {
+            "position": 7,
+            "startNo": 324,
+            "nick": "Małgorzata Schonfeld",
+            "groupName": "Wroniawy Team",
+            "distance": 536300
+          },
+          {
+            "position": 8,
+            "startNo": 105,
+            "nick": "Piotr ",
+            "groupName": "",
+            "distance": 517700
+          },
+          {
+            "position": 9,
+            "startNo": 137,
+            "nick": "Bogo 80",
+            "groupName": "SP 84 WROCŁAW",
+            "distance": 429600
+          },
+          {
+            "position": 10,
+            "startNo": 275,
+            "nick": "Miki ",
+            "groupName": "",
+            "distance": 427800
+          }
+        ]
+      }
+    ],
+    "7": [
+      {
+        "activityType": 1,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 367,
+            "nick": "Ania ",
+            "groupName": "SP Siercza",
+            "distance": 484000
+          },
+          {
+            "position": 2,
+            "startNo": 356,
+            "nick": "Gosia ",
+            "groupName": "SP Siercza",
+            "distance": 473400
+          },
+          {
+            "position": 3,
+            "startNo": 361,
+            "nick": "Magdalena Kot ",
+            "groupName": "Liceum im. Feliksa Nowowiejskiego w Braniewie. ",
+            "distance": 456800
+          },
+          {
+            "position": 4,
+            "startNo": 641,
+            "nick": "Magda Kośmider",
+            "groupName": "Polska Sobotnia Szkoła w Lancaster",
+            "distance": 328400
+          },
+          {
+            "position": 5,
+            "startNo": 541,
+            "nick": "Patrizio",
+            "groupName": "Dwunastka Poznań",
+            "distance": 316400
+          },
+          {
+            "position": 6,
+            "startNo": 121,
+            "nick": "Mariolka",
+            "groupName": "Babki na trasie",
+            "distance": 303300
+          },
+          {
+            "position": 7,
+            "startNo": 540,
+            "nick": "Kasia S.",
+            "groupName": "Sportowa Wicka 19 Toruń",
+            "distance": 300200
+          },
+          {
+            "position": 8,
+            "startNo": 479,
+            "nick": "Marta",
+            "groupName": "Belforce One",
+            "distance": 268700
+          },
+          {
+            "position": 9,
+            "startNo": 484,
+            "nick": "sprzyw",
+            "groupName": "Dwunastka Poznań ",
+            "distance": 238800
+          },
+          {
+            "position": 10,
+            "startNo": 120,
+            "nick": "Madzia",
+            "groupName": "Babki na trasie",
+            "distance": 223400
+          }
+        ]
+      },
+      {
+        "activityType": 2,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 742,
+            "nick": "Marcin Józefaciuk ",
+            "groupName": "",
+            "distance": 1359400
+          },
+          {
+            "position": 2,
+            "startNo": 155,
+            "nick": "BOGO 80",
+            "groupName": "SP 84 Wrocław",
+            "distance": 291200
+          },
+          {
+            "position": 3,
+            "startNo": 152,
+            "nick": "Krzysztof",
+            "groupName": "SP 84 Wrocław",
+            "distance": 281300
+          },
+          {
+            "position": 4,
+            "startNo": 269,
+            "nick": "Paula Kwiatkowska",
+            "groupName": "Pracownia Języka Angielskiego w Mysłakowie",
+            "distance": 183900
+          },
+          {
+            "position": 5,
+            "startNo": 272,
+            "nick": "Aga F.",
+            "groupName": "Belferska Ekipa Micka",
+            "distance": 173200
+          },
+          {
+            "position": 6,
+            "startNo": 216,
+            "nick": "Mirosław Leymann",
+            "groupName": "PSP STO Rembertów ",
+            "distance": 172000
+          },
+          {
+            "position": 7,
+            "startNo": 204,
+            "nick": "Ania K.",
+            "groupName": "EduQueens Dziadowa Kłoda",
+            "distance": 170400
+          },
+          {
+            "position": 8,
+            "startNo": 196,
+            "nick": "Paulinkaaaasss",
+            "groupName": "Moja ❤️",
+            "distance": 155000
+          },
+          {
+            "position": 9,
+            "startNo": 454,
+            "nick": "Maciej",
+            "groupName": "ZSP Kłecko",
+            "distance": 134700
+          },
+          {
+            "position": 10,
+            "startNo": 258,
+            "nick": "Piotr Włodarczyk",
+            "groupName": "",
+            "distance": 124200
+          }
+        ]
+      },
+      {
+        "activityType": 3,
+        "table": [
+          {
+            "position": 1,
+            "startNo": 199,
+            "nick": "Tomasz Grandys",
+            "groupName": "",
+            "distance": 1104100
+          },
+          {
+            "position": 2,
+            "startNo": 102,
+            "nick": "Koto",
+            "groupName": "ODN Rewers",
+            "distance": 876700
+          },
+          {
+            "position": 3,
+            "startNo": 142,
+            "nick": "Robert Rapsiewicz (SP Tuchom)",
+            "groupName": "",
+            "distance": 707900
+          },
+          {
+            "position": 4,
+            "startNo": 414,
+            "nick": "Beata",
+            "groupName": "UG",
+            "distance": 582100
+          },
+          {
+            "position": 5,
+            "startNo": 185,
+            "nick": "Piotr",
+            "groupName": "",
+            "distance": 580000
+          },
+          {
+            "position": 6,
+            "startNo": 113,
+            "nick": "Alice",
+            "groupName": "Babki na trasie",
+            "distance": 542900
+          },
+          {
+            "position": 7,
+            "startNo": 400,
+            "nick": "Elżbieta",
+            "groupName": "Szesnastka",
+            "distance": 473500
+          },
+          {
+            "position": 8,
+            "startNo": 197,
+            "nick": "Zuza",
+            "groupName": "SP 84 Wrocław ",
+            "distance": 412900
+          },
+          {
+            "position": 9,
+            "startNo": 517,
+            "nick": "Natalia M.",
+            "groupName": "EduQueens",
+            "distance": 411300
+          },
+          {
+            "position": 10,
+            "startNo": 254,
+            "nick": "PaulaK",
+            "groupName": "SP 84 Wrocław",
+            "distance": 358200
+          }
+        ]
+      }
+    ]
+  }
+}

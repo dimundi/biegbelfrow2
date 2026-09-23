@@ -28,6 +28,25 @@
     <div><p class="eyebrow">Więcej niż wydarzenie sportowe</p><h2>Łączy nas ruch.<br>I chęć pomagania.</h2></div>
     <div class="about-copy"><p>Od 2021 roku Bieg Belfrów łączy pracowników oświaty, którzy przez spacer, bieganie i jazdę na rowerze wspierają potrzebujące dzieci.</p><p>To czas dla siebie i okazja do spotkania z innymi. W pojedynkę, z koleżanką z pracy lub całą szkolną ekipą — każda aktywność ma znaczenie.</p><a class="text-link" href="#jak-to-dziala">Zobacz, na czym to polega <span aria-hidden="true">↗</span></a></div>
 </section>
+<?php get_template_part('template-parts/ranking'); ?>
+<section class="container participants-section" aria-labelledby="participants-heading">
+    <div class="section-heading">
+        <div><p class="eyebrow">Nasza społeczność</p><h2 id="participants-heading">To Wy tworzycie Bieg Belfrów.</h2></div>
+        <div class="participants-controls" hidden>
+            <button type="button" data-direction="-1" aria-label="Poprzednie zdjęcia" aria-controls="participants-gallery">←</button>
+            <button type="button" data-direction="1" aria-label="Następne zdjęcia" aria-controls="participants-gallery">→</button>
+        </div>
+    </div>
+    <div class="participants-gallery" id="participants-gallery" tabindex="0" role="region" aria-label="Zdjęcia uczestników Biegu Belfrów">
+        <?php
+        $participant_photos = json_decode(file_get_contents(get_template_directory() . '/data/participants.json'), true);
+        foreach ($participant_photos as $photo_index => $photo) : ?>
+        <a class="participant-photo" href="<?php echo esc_url(bb_asset($photo['local'])); ?>" aria-label="<?php echo esc_attr('Powiększ zdjęcie uczestników ' . ($photo_index + 1)); ?>">
+            <img src="<?php echo esc_url(bb_asset($photo['local'])); ?>" alt="<?php echo esc_attr('Uczestnicy Biegu Belfrów — zdjęcie ' . ($photo_index + 1)); ?>" width="<?php echo esc_attr($photo['width']); ?>" height="<?php echo esc_attr($photo['height']); ?>" loading="lazy">
+        </a>
+        <?php endforeach; ?>
+    </div>
+</section>
 <section class="activities-section section" id="aktywnosci">
 <div class="container">
     <div class="section-heading"><div><p class="eyebrow">Wybierz swój sposób</p><h2>Każdy ma swoje tempo.</h2></div><p>Trzy dyscypliny. Jeden wspólny cel.<br>Znajdź miejsce dla siebie.</p></div>

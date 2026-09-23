@@ -12,7 +12,7 @@ function bb_setting($key) {
         'intro' => 'Dziękujemy za udział, wspólną aktywność i pomoc potrzebującym dzieciom. To Wy tworzycie Bieg Belfrów!',
         'primary' => '#d93400',
         'accent' => '#ffcf00',
-        'background' => '#faf8f2',
+        'background' => '#ffffff',
     );
     return get_theme_mod('bb_' . $key, $defaults[$key] ?? '');
 }
@@ -28,7 +28,8 @@ add_action('after_setup_theme', function () {
     register_nav_menus(array('primary' => 'Menu główne'));
 });
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('biegbelfrow', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css'));
+    wp_enqueue_style('biegbelfrow-fonts', bb_asset('fonts/fonts.css'), array(), filemtime(get_stylesheet_directory() . '/assets/fonts/fonts.css'));
+    wp_enqueue_style('biegbelfrow', get_stylesheet_uri(), array('biegbelfrow-fonts'), filemtime(get_stylesheet_directory() . '/style.css'));
     $css = ':root{';
     foreach (array('primary', 'accent', 'background') as $key) {
         $css .= '--bb-' . $key . ':' . sanitize_hex_color(bb_setting($key)) . ';';
@@ -53,7 +54,7 @@ add_action('customize_register', function ($customizer) {
 });
 function bb_fallback_menu() {
     echo '<ul class="menu">';
-    foreach (array('/' => '7 EDYCJA', '/edycje/' => 'HISTORIA', '/onas/' => 'O NAS', '/kontakt/' => 'KONTAKT', '/sklepik/' => 'SKLEPIK') as $path => $label) {
+    foreach (array('/' => '7 edycja', '/edycje/' => 'Historia', '/onas/' => 'O nas', '/kontakt/' => 'Kontakt', '/sklepik/' => 'Sklepik') as $path => $label) {
         $current = $path === '/' ? is_front_page() : is_page(trim($path, '/'));
         $url = $path === '/sklepik/' && function_exists('wc_get_page_permalink') ? wc_get_page_permalink('shop') : home_url($path);
         echo '<li><a href="' . esc_url($url) . '"' . ($current ? ' aria-current="page"' : '') . '>' . esc_html($label) . '</a></li>';
