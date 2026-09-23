@@ -16,15 +16,16 @@
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'fallback_cb' => 'bb_fallback_menu', 'depth' => 1)); ?>
             <details class="account-menu">
                 <summary aria-label="Menu konta">
-                    <span><?php echo is_user_logged_in() ? 'Moje konto' : 'Zaloguj się'; ?></span>
+                    <span><?php echo is_user_logged_in() ? 'Mój BB' : 'Zaloguj się'; ?></span>
                     <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></svg>
                 </summary>
                 <div class="account-links">
                 <?php if (is_user_logged_in()) : ?>
-                    <a href="<?php echo esc_url(function_exists('wc_get_page_permalink') ? wc_get_page_permalink('myaccount') : admin_url('profile.php')); ?>">Moje konto</a>
+                    <a href="<?php echo esc_url(home_url('/mojbb/')); ?>">Mój BB</a>
+                    <a href="<?php echo esc_url(add_query_arg('widok', 'dane', home_url('/mojbb/'))); ?>">Moje dane</a>
                     <a href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>">Wyloguj się</a>
                 <?php else : ?>
-                    <a href="<?php echo esc_url(wp_login_url()); ?>">Zaloguj się</a>
+                    <a href="<?php echo esc_url(wp_login_url(home_url('/mojbb/'))); ?>">Zaloguj się</a>
                 <?php endif; ?>
                 </div>
             </details>

@@ -7,4 +7,6 @@ if ! wp core is-installed --allow-root; then
     wp option update blog_public 0 --allow-root
 fi
 wp core is-installed --allow-root
-
+if ! wp plugin is-active biegbelfrow --allow-root; then
+    wp plugin activate biegbelfrow --allow-root
+fi
