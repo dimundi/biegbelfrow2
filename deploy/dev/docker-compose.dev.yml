@@ -40,6 +40,7 @@ services:
       WORDPRESS_ADMIN_EMAIL: ${WORDPRESS_ADMIN_EMAIL:?}
     volumes:
       - ../../wordpress:/var/www/html
+      - ../../../bbWidget/src/bbwidget:/var/www/html/wp-content/plugins/bbwidget
       - ./init-dev.sh:/usr/local/bin/init-dev.sh:ro
     depends_on:
       db:
@@ -53,4 +54,3 @@ services:
 
 volumes:
   db-dev:
-
