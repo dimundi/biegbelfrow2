@@ -1,0 +1,79 @@
+body.login {
+    background: #f5f5f1;
+    color: #191919;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+}
+body.login * { box-sizing: border-box; }
+body.login #login { width: min(460px, calc(100% - 32px)); padding: 42px 0 24px; }
+body.login h1 a {
+    width: 146px;
+    height: 108px;
+    background-size: contain;
+    background-position: center;
+    margin: 0 auto 24px;
+}
+.bb-login-intro { text-align: center; margin-bottom: 28px; }
+.bb-login-intro .bb-login-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; color: #626262; }
+.bb-login-intro p { font-size: 15px; margin: 0; }
+body.login form {
+    background: #fff;
+    border: 1px solid #e5e5de;
+    border-radius: 24px;
+    box-shadow: 0 12px 36px #19191906;
+    padding: 32px;
+    margin-top: 0;
+    font-weight: 400;
+}
+body.login label { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+body.login input[type=text], body.login input[type=password], body.login input[type=email] {
+    font-family: inherit;
+    font-size: 16px;
+    min-height: 50px;
+    border: 1px solid #d6d6d0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: #fff;
+    color: #191919;
+}
+body.login .wp-pwd input { padding-right: 48px; }
+body.login input:focus { border-color: #191919; box-shadow: 0 0 0 2px #19191920; }
+body.login .button.wp-hide-pw { color: #555; height: 50px; width: 46px; }
+body.login .button.wp-hide-pw:focus { border-color: #191919; box-shadow: 0 0 0 2px #19191920; }
+body.login form .forgetmenot { float: none; margin: 4px 0 22px; }
+body.login .forgetmenot label { font-size: 13px; font-weight: 400; }
+body.login input[type=checkbox] { border-radius: 4px; border-color: #999; }
+body.login .submit .button-primary {
+    float: none;
+    width: 100%;
+    min-height: 50px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--bb-primary);
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 12px 20px;
+    white-space: normal;
+    line-height: 1.5;
+    cursor: pointer;
+}
+body.login .submit .button-primary:hover { filter: brightness(.9); }
+body.login a:focus-visible, body.login button:focus-visible, body.login .submit .button-primary:focus-visible { outline: 3px solid #191919; outline-offset: 4px; }
+body.login #nav, body.login #backtoblog { text-align: center; padding: 0; font-size: 13px; }
+body.login #nav a, body.login #backtoblog a, body.login .privacy-policy-page-link a { color: #555; }
+body.login #nav a:hover, body.login #backtoblog a:hover { color: var(--bb-primary); text-decoration: underline; }
+body.login .message, body.login .notice, body.login .success { border-radius: 10px; border-left-color: var(--bb-accent); box-shadow: none; font-size: 13px; }
+body.login #login_error { border-left-color: #b32d2e; }
+body.login .language-switcher { padding: 0 16px 24px; }
+body.login .language-switcher form { background: transparent; padding: 0; border: 0; box-shadow: none; }
+body.login .language-switcher select { max-width: 180px; border-radius: 8px; }
+body.login .language-switcher .button { border-color: #d6d6d0; color: #191919; border-radius: 8px; }
+@media (max-width: 480px) {
+    body.login #login { padding-top: 24px; }
+    body.login form { padding: 24px; }
+    body.login h1 a { width: 120px; height: 88px; margin-bottom: 20px; }
+}
