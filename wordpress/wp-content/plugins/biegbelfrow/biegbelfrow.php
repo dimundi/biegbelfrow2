@@ -40,7 +40,7 @@ add_filter('wp_robots', function ($robots) {
     return $robots;
 });
 add_filter('login_redirect', function ($redirect, $requested, $user) {
-    if ($user instanceof WP_User && !$requested && !user_can($user, 'manage_options')) {
+    if ($user instanceof WP_User && !user_can($user, 'manage_options')) {
         return bb_panel_url();
     }
     return $redirect;

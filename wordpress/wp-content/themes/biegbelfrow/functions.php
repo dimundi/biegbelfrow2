@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 add_action('login_enqueue_scripts', function () {
     wp_enqueue_style('bb-login-fonts', bb_asset('fonts/fonts.css'), array(), filemtime(get_template_directory() . '/assets/fonts/fonts.css'));
     wp_enqueue_style('bb-login', bb_asset('login.css'), array('bb-login-fonts'), filemtime(get_template_directory() . '/assets/login.css'));
+    wp_enqueue_script('bb-login', bb_asset('login.js'), array(), filemtime(get_template_directory() . '/assets/login.js'), true);
     $css = ':root{--bb-primary:' . (sanitize_hex_color(bb_setting('primary')) ?: '#d93400') . ';--bb-accent:' . (sanitize_hex_color(bb_setting('accent')) ?: '#ffcf00') . ';}';
     $css .= 'body.login h1 a{background-image:url(' . wp_json_encode(esc_url_raw(bb_image('logo', 'BB7_logo_small.png')), JSON_HEX_TAG | JSON_HEX_AMP) . ');}';
     wp_add_inline_style('bb-login', $css);
@@ -12,8 +13,12 @@ add_action('login_enqueue_scripts', function () {
 add_filter('login_headerurl', function () { return home_url('/'); });
 add_filter('login_headertext', function () { return 'Bieg Belfrów — strona główna'; });
 add_filter('login_title', function ($title) { return str_replace('WordPress', 'Bieg Belfrów', $title); });
+add_filter('login_display_language_dropdown', '__return_false');
 add_filter('login_message', function ($message) {
-    return '<div class="bb-login-intro"><p class="bb-login-eyebrow">TWÓJ PANEL UCZESTNIKA</p></div>' . $message;
+    global $action;
+    $intro = '<div class="bb-login-intro"><p class="bb-login-eyebrow">TWÓJ PANEL UCZESTNIKA</p></div>';
+    if ($action !== 'login') { return $intro . $message; }
+    return $intro . $message . '<section class="bb-login-create-account"><h2>Nie masz jeszcze konta?</h2><a href="' . esc_url(wp_registration_url()) . '">Utwórz konto</a><p>Niestety konta z poprzednich edycji zostały usunięte. Utwórz nowe konto, a po podaniu tego samego adresu e-mail pobierzemy Twoje wyniki z poprzednich edycji.</p></section>';
 });
 
 function bb_asset($name) {

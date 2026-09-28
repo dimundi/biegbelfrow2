@@ -14,21 +14,28 @@
         <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
         <nav id="site-nav" aria-label="Menu główne">
             <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'fallback_cb' => 'bb_fallback_menu', 'depth' => 1)); ?>
+            <?php if (is_user_logged_in()) : ?>
+            <?php
+            $account_user = wp_get_current_user();
+            $initial_source = trim($account_user->first_name . ' ' . $account_user->last_name) ?: $account_user->display_name;
+            $initial_parts = preg_split('/\s+/', trim($initial_source));
+            $account_initials = mb_strtoupper(mb_substr($initial_parts[0], 0, 1) . (count($initial_parts) > 1 ? mb_substr(end($initial_parts), 0, 1) : ''));
+            ?>
             <details class="account-menu">
                 <summary aria-label="Menu konta">
-                    <span><?php echo is_user_logged_in() ? 'Mój BB' : 'Zaloguj się'; ?></span>
-                    <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></svg>
+                    <span class="account-initials" aria-hidden="true"><?php echo esc_html($account_initials); ?></span>
                 </summary>
                 <div class="account-links">
-                <?php if (is_user_logged_in()) : ?>
                     <a href="<?php echo esc_url(home_url('/mojbb/')); ?>">Mój BB</a>
                     <a href="<?php echo esc_url(add_query_arg('widok', 'dane', home_url('/mojbb/'))); ?>">Moje dane</a>
                     <a href="<?php echo esc_url(wp_logout_url(home_url('/'))); ?>">Wyloguj się</a>
-                <?php else : ?>
-                    <a href="<?php echo esc_url(wp_login_url(home_url('/mojbb/'))); ?>">Zaloguj się</a>
-                <?php endif; ?>
                 </div>
             </details>
+            <?php else : ?>
+            <a class="account-login" href="<?php echo esc_url(wp_login_url(home_url('/mojbb/'))); ?>">Zaloguj się
+                <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></svg>
+            </a>
+            <?php endif; ?>
         </nav>
     </div>
 </header>

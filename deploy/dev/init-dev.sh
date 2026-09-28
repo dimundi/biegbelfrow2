@@ -7,6 +7,8 @@ if ! wp core is-installed --allow-root; then
     wp option update blog_public 0 --allow-root
 fi
 wp core is-installed --allow-root
+mkdir -p wp-content/upgrade wp-content/uploads wp-content/languages
+chown -R www-data:www-data wp-content/upgrade wp-content/uploads wp-content/languages
 if ! wp plugin is-active biegbelfrow --allow-root; then
     wp plugin activate biegbelfrow --allow-root
 fi
