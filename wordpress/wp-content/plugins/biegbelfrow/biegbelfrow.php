@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Bieg Belfrów
- * Description: Panel uczestnika i funkcje Biegu Belfrów.
+ * Plugin Name: Mój BB
+ * Description: Panel zalogowanego użytkownika Biegu Belfrów — obsługa konta i danych profilowych.
  * Version: 0.1.0
  */
 defined('ABSPATH') || exit;
