@@ -56,6 +56,7 @@ add_action('wp_enqueue_scripts', function () {
     }
     wp_add_inline_style('biegbelfrow', $css . '}');
     wp_enqueue_script('biegbelfrow', bb_asset('site.js'), array(), filemtime(get_stylesheet_directory() . '/assets/site.js'), true);
+    wp_enqueue_script('bb-member-panel', bb_asset('member-panel.js'), array(), filemtime(get_stylesheet_directory() . '/assets/member-panel.js'), true);
 });
 add_action('customize_register', function ($customizer) {
     $customizer->add_section('bb_home', array('title' => 'Bieg Belfrów — wygląd strony', 'priority' => 30));

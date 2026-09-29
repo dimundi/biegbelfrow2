@@ -58,8 +58,8 @@ get_header();
             $editions_table = $wpdb->prefix . 'bb_editions';
             $activities_table = $wpdb->prefix . 'bb_participant_activities';
             $participations = $wpdb->get_results($wpdb->prepare(
-                "SELECT p.bbParticipantId, p.fullName, p.startNumber, p.irbEnabled, e.editionNumber, e.startDate, e.endDate,
-                    GROUP_CONCAT(DISTINCT a.activityType ORDER BY a.activityType SEPARATOR ',') AS activityTypes
+                "SELECT p.bbParticipantId, p.fullName, p.irbNick, p.startNumber, p.irbEnabled, e.bbeditionId, e.editionNumber, e.isCurrent, e.logo,
+                    GROUP_CONCAT(DISTINCT a.activityType ORDER BY FIELD(a.activityType, 'walk', 'run', 'bike', 'iron_teacher') SEPARATOR ',') AS activityTypes
                  FROM $participants_table p
                  INNER JOIN $editions_table e ON e.bbeditionId=p.bbeditionId
                  LEFT JOIN $activities_table a ON a.bbParticipantId=p.bbParticipantId
@@ -71,7 +71,7 @@ get_header();
                 $member->ID
             ), ARRAY_A);
             $activity_labels = array('walk' => 'Spacer', 'run' => 'Bieg', 'bike' => 'Rower', 'iron_teacher' => 'Iron Teacher');
-            $format_date = static function ($date) { return $date ? wp_date('d.m.Y', strtotime($date)) : ''; };
+            $ranking_types = array('walk' => 'Spacer', 'run' => 'Bieg', 'bike' => 'Rower');
             ?>
             <section class="member-editions">
                 <?php if (!$participations) : ?>
@@ -82,21 +82,85 @@ get_header();
                         <?php
                         $types = array_filter(array_map('trim', explode(',', (string) $participation['activityTypes'])));
                         $labels = array_map(static function ($type) use ($activity_labels) { return $activity_labels[$type] ?? $type; }, $types);
-                        $dates = array_filter(array($format_date($participation['startDate']), $format_date($participation['endDate'])));
+                        $edition_logo = absint($participation['logo']);
                         ?>
                         <article class="member-edition-card">
-                            <div><span class="member-edition-number"><?php echo esc_html($participation['editionNumber']); ?></span><p><?php echo esc_html($participation['editionNumber']); ?>. edycja Biegu Belfrów</p></div>
+                            <div><span class="member-edition-logo"><?php if ($edition_logo) { echo wp_get_attachment_image($edition_logo, 'medium', false, array('alt' => 'Logo ' . $participation['editionNumber'] . '. edycji')); } else { ?><span class="member-edition-logo-placeholder" aria-label="Edycja <?php echo esc_attr($participation['editionNumber']); ?>">BB</span><?php } ?></span><p><?php echo esc_html($participation['editionNumber']); ?>. edycja Biegu Belfrów</p></div>
                             <div class="member-edition-details">
-                                <?php if ($dates) : ?><span><?php echo esc_html(implode(' – ', $dates)); ?></span><?php endif; ?>
                                 <?php if ($labels) : ?><span><?php echo esc_html(implode(' · ', $labels)); ?></span><?php endif; ?>
-                                <?php if ($participation['startNumber']) : ?><span>Numer startowy <?php echo esc_html($participation['startNumber']); ?></span><?php endif; ?>
+                                <?php if ($participation['startNumber']) : ?><span class="member-start-number"><?php echo esc_html($participation['startNumber']); ?></span><?php endif; ?>
                             </div>
-                            <span class="member-edition-status"><?php echo $participation['irbEnabled'] ? 'Udział w IRB' : 'Udział w Biegu Belfrów'; ?></span>
+                            <?php if ($participation['irbEnabled']) : ?>
+                                <button class="member-edition-results" type="button" data-member-results-open="<?php echo esc_attr($participation['bbParticipantId']); ?>">Moje wyniki</button>
+                            <?php endif; ?>
                         </article>
                     <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </section>
+            <?php foreach ($participations as $participation) : ?>
+                <?php if (!$participation['irbEnabled']) continue; ?>
+                <?php
+                $ranking_data = array();
+                $default_ranking_type = 'walk';
+                $participant_types = array_filter(array_map('trim', explode(',', (string) $participation['activityTypes'])));
+                foreach (array_keys($ranking_types) as $type) {
+                    if (in_array($type, $participant_types, true)) {
+                        $default_ranking_type = $type;
+                        break;
+                    }
+                }
+                if (class_exists('BBW_Rankings')) {
+                    $ranking_data = BBW_Rankings::rows_for_page(array(
+                        'bbeditionId' => (int) $participation['bbeditionId'],
+                        'isCurrent' => (int) $participation['isCurrent'],
+                    ));
+                }
+                $modal_id = 'member-results-' . (int) $participation['bbParticipantId'];
+                ?>
+                <div id="<?php echo esc_attr($modal_id); ?>" class="member-results-modal" data-member-results-modal="<?php echo esc_attr($participation['bbParticipantId']); ?>" hidden>
+                    <div class="member-results-dialog" role="dialog" aria-modal="true" aria-labelledby="<?php echo esc_attr($modal_id); ?>-title" tabindex="-1">
+                        <button class="member-results-close" type="button" data-member-results-close aria-label="Zamknij wyniki">×</button>
+                        <header class="member-results-heading">
+                            <p class="eyebrow">Indywidualny Ranking Belfrów</p>
+                            <h2 id="<?php echo esc_attr($modal_id); ?>-title"><?php echo esc_html($participation['editionNumber']); ?>. edycja Biegu Belfrów</h2>
+                        </header>
+                        <?php if (!$ranking_data) : ?>
+                            <p class="member-empty-results">Wyniki tej edycji nie są jeszcze dostępne.</p>
+                        <?php else : ?>
+                            <div class="member-results-tabs" role="tablist" aria-label="Aktywność">
+                                <?php foreach ($ranking_types as $type => $label) : ?>
+                                    <button type="button" role="tab" data-member-results-tab="<?php echo esc_attr($type); ?>" aria-selected="<?php echo $type === $default_ranking_type ? 'true' : 'false'; ?>"><?php echo esc_html($label); ?></button>
+                                <?php endforeach; ?>
+                            </div>
+                            <?php foreach ($ranking_types as $type => $label) : ?>
+                                <?php $rows = $ranking_data[$type] ?? array(); ?>
+                                <div class="member-results-panel" data-member-results-panel="<?php echo esc_attr($type); ?>" <?php echo $type === $default_ranking_type ? '' : 'hidden'; ?> role="tabpanel">
+                                    <?php if (!$rows) : ?>
+                                        <p class="member-empty-results">Brak wyników dla aktywności: <?php echo esc_html($label); ?>.</p>
+                                    <?php else : ?>
+                                        <div class="member-results-list" role="list">
+                                        <?php foreach ($rows as $row) : ?>
+                                            <?php
+                                            $same_id = (int) $row['bbParticipantId'] === (int) $participation['bbParticipantId'];
+                                            $same_nick = $participation['irbNick'] !== '' && $participation['irbNick'] === ($row['irbNick'] ?? '');
+                                            $same_start_number = $participation['startNumber'] !== null && (int) $participation['startNumber'] === (int) ($row['startNumber'] ?? 0);
+                                            $is_member_result = $same_id || ($same_nick && $same_start_number);
+                                            ?>
+                                            <article class="member-ranking-row<?php echo $is_member_result ? ' is-member-result' : ''; ?>"<?php echo $is_member_result ? ' data-member-result-highlight' : ''; ?> role="listitem">
+                                                <span class="member-ranking-place"><?php echo esc_html($row['place']); ?></span>
+                                                <div><strong><?php echo esc_html(BBW_Rankings::public_name($row)); ?></strong><small><?php if ($row['startNumber']) : ?><span class="member-start-number"><?php echo esc_html($row['startNumber']); ?></span><?php endif; ?><?php echo esc_html($row['irbGroupName'] ?: ''); ?></small></div>
+                                                <b><?php echo esc_html(number_format(((int) $row['distanceMeters']) / 1000, 1, ',', '') . ' km'); ?></b>
+                                            </article>
+                                        <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         <?php endif; ?>
     </div>
 </main>
