@@ -37,6 +37,10 @@ function bb_setting($key) {
     return get_theme_mod('bb_' . $key, $defaults[$key] ?? '');
 }
 function bb_image($key, $fallback) {
+    if ($key === 'logo' && class_exists('BBW_Visual_Theme')) {
+        $active_logo = BBW_Visual_Theme::active_logo_url();
+        if ($active_logo) { return $active_logo; }
+    }
     $id = absint(get_theme_mod('bb_' . $key));
     return ($id ? wp_get_attachment_image_url($id, 'large') : false) ?: bb_asset($fallback);
 }
