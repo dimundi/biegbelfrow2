@@ -1,28 +1,6 @@
 <?php get_header(); ?>
 <main id="main">
-<section class="hero container" aria-labelledby="hero-heading">
-    <div class="hero-copy">
-        <p class="eyebrow"><span class="edition-dot"></span><?php echo esc_html(bb_setting('edition')); ?></p>
-        <h1 id="hero-heading"><?php echo esc_html(bb_setting('heading')); ?></h1>
-        <p class="hero-announcement"><?php echo esc_html(bb_setting('announcement')); ?></p>
-        <p class="hero-intro"><?php echo esc_html(bb_setting('intro')); ?></p>
-        <div class="hero-actions"><a class="button" href="#aktywnosci">Znajdź swoją aktywność <span aria-hidden="true">↗</span></a><a class="text-link" href="#o-biegu">Poznaj Bieg Belfrów <span aria-hidden="true">↓</span></a></div>
-        <div class="hero-note"><span class="note-mark" aria-hidden="true">♥</span><span>Dla siebie. Dla innych.<br><strong>W swoim tempie.</strong></span></div>
-    </div>
-    <?php
-    $hero_slides = array();
-    foreach (array('bieg' => 'Bieg', 'spacer' => 'Spacer', 'rower' => 'Rower', 'ironteacher' => 'Iron Teacher') as $key => $label) {
-        $hero_slides[] = array(
-            'src' => $key === 'bieg' ? bb_image('hero', 'BB7_post_bieg.jpg') : bb_asset('BB7_post_' . $key . '.jpg'),
-            'alt' => $label . ' — grafika 7. edycji',
-        );
-    }
-    ?>
-    <div class="hero-visual" data-slides="<?php echo esc_attr(wp_json_encode($hero_slides)); ?>" tabindex="0" aria-label="Grafiki aktywności. Najedź kursorem lub ustaw fokus, aby zatrzymać przewijanie.">
-        <img id="hero-activity-image" class="hero-image" src="<?php echo esc_url(bb_image('hero', 'BB7_post_bieg.jpg')); ?>" alt="Bieg — grafika 7. edycji" width="720" height="540" fetchpriority="high">
-        <div class="visual-bottom"><span>Spacer. Bieg. Rower.</span><strong>Twój ruch ma moc.</strong></div>
-    </div>
-</section>
+<?php echo do_shortcode('[bb_home_hero]'); ?>
 <div class="discipline-strip"><div class="container"><span>SPACER</span><i aria-hidden="true">✳</i><span>BIEG</span><i aria-hidden="true">✳</i><span>ROWER</span><i aria-hidden="true">✳</i><span>POMAGANIE</span></div></div>
 <section class="container about-section section" id="o-biegu">
     <div><p class="eyebrow">Więcej niż wydarzenie sportowe</p><h2>Łączy nas ruch.<br>I chęć pomagania.</h2></div>
